@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<meta name="description" content="The Online Rock Paper Scissor Game" />
+		<meta name="keywords" content="rock, paper, scissor, game, online"/>
+		
+		<link type="text/css" rel="stylesheet" href="rps.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Salsa' rel='stylesheet' type='text/css'>
+		
+		<title>Rock Paper Scissors and Bombs- Online game</title>
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-26503783-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+	</head>
+	<body class="rps">
+		
+		<section class="game-pad">
+			<header>
+				<h1>Rock Paper Scissors &amp; Bombs</h1>
+				<ul class="menu">
+					<li><a href="javascript:void(0);" id="about">About</a></li>
+					<li><a href="javascript:void(0);" id="howto">How to play?</a></li>
+					<li><a href="javascript:void(0);" id="credits">Credits</a></li>
+				</ul>
+				<!-- Ads -->
+				<script type="text/javascript"><!--
+google_ad_client = "ca-pub-4601926589924919";
+/* rps */
+google_ad_slot = "3781642634";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+			<!-- end of Ads -->
+			</header>
+			<section class="players clearfix">
+				<article class="player human">
+					<div class="clearfix">
+						<div class="bomb"></div>
+					</div>
+					<header class="clearfix">
+						<h1>You</h1>
+						<aside class="score-board">
+							<span class="score">0</span>
+						</aside>
+					</header>
+					<section class="main">
+						<ul class="choice">
+							<li><a id="rock" href="javascript:void(0);" class="rock icon">Rock</a></li>
+							<li><a id="paper" href="javascript:void(0);" class="paper icon">Paper</a></li>
+							<li><a id="scissor" href="javascript:void(0);" class="scissor icon">Scissor</a></li>
+						</ul>
+					</section>
+				</article>
+				<article class="player bot">
+					<div class="clearfix">
+						<div class="bomb"></div>
+					</div>
+					<header class="clearfix">
+						<aside class="score-board">
+							<span class="score">0</span>
+						</aside>
+						<h1>Bot</h1>
+					</header>
+					<section class="main">
+						<ul class="choice">
+							<li><a id="rock" href="javascript:void(0);" class="rock icon">Rock</a></li>
+						</ul>
+					</section>
+				</article>
+			</section>
+		</section>
+		
+		<section class="modal-content">
+			<div id="about-content" class="overlay">
+				<h1>About Rock Paper Scissors game</h1>
+				<p>Rock Paper Scissors is a simple game often played by two people.</p>
+				<p>The players count aloud to three, each time raising one hand in a fist and swinging it down on the count. After the third count, the players change their hands into one of three gestures. </p>
+				<p>The winner is chosen based on the below rules:<br/><br/>
+					<div style="text-align:center">
+						<img src="images/rps-about.jpg" title="Rock Paper Scissor rules"/>
+					</div>
+				</p>
+			</div>
+			<div id="howto-content" class="overlay">
+				<h1>How to play?</h1>
+				<p>
+					<ol>
+						<li>Choose your gesture by clicking on it.</li>
+						<li>Pray for the bot to take a dumb decision.</li>
+						<li>Don't let the bomb on your side to fall down.</li>
+					</ol>
+				</p>
+				<p>
+					When you score 3 points more than bot, you WIN! <br/>
+					<div style="text-align:center">
+						<img src="images/human-win.png" title="Score more to win" />
+					</div>
+				</p>
+			</div>
+			<div id="credits-content" class="overlay">
+				<h1>Credits</h1>
+				<p>Developed by: <a href="http://veerasundar.com">Veera</a> | veera.k.sundar@gmail.com</p>
+				
+				<h2>Thanks to</h2>
+				<ul>
+					<li><a href="http://jquery.com">JQuery</a> for the wonderful JavaScript library.</li>
+					<li><a href="http://riotousassembly.wordpress.com/2011/01/24/rock-paper-scissors/">Riotous Assembly</a> for the Rock Paper Scissor images.</li>
+					<li><a href="http://www.colorzilla.com/gradient-editor/">Colorzilla</a> for the gradient tool.</li>
+					<li><a href="https://github.com/ubuwaits/css3-buttons">Ubuwaits</a> for the CSS3 buttons.</li>
+					<li><a href="http://www.ericmmartin.com/projects/simplemodal/">Eric Martin</a> for the simple modal library.</li>
+				</ul>
+			</div>
+			<div id="win-content" class="overlay">
+				<div class="human-won hidden">
+					<h1>You just won!</h1>
+					<p>Like it? Share this game with your friends: <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="vraa">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script></p>
+					<p>or...</p>
+				</div>
+				
+				<div class="bot-won hidden">
+					<h1>The bot won! :(</h1>
+					<p>But, there's always another chance to beat the bot.</p>
+				</div>
+				
+				<button class="blue-pill" id="start-new" >Start new game</button>
+			</div>
+		</section>
+		
+		<script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" src="jquery.simplemodal.1.4.1.min.js"></script>
+		<script type="text/javascript" src="rps.js"></script>
+	</body>
+</html>
