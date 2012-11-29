@@ -63,7 +63,7 @@ table {
 }
 
 /* The Rock-Paper-Scissor */
-.rps{font:1em 'Salsa', "Trebushet MS";color:#00A0C6;padding-top:10px;}
+.rps{font:1em Georgia;color:#00A0C6;padding-top:10px;}
 
 .rps .game-pad{margin:0 auto;width:1000px;}
 
@@ -113,7 +113,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff670f', end
 .human header{padding:10px 50px 10px 20px;border-radius:20px 0 0 20px;}
 .bot header{padding:10px 20px 10px 50px;border-radius:0 20px 20px 0;}
 
-.rps .main{padding:50px 10px 0 10px;}
+.rps .main{padding:20px 10px 0 10px;}
+.rps .main h4{text-align: center;margin-bottom: 30px;color: orange;}
+.rps .main h4 strong{color:#00A0C6;font-weight: bold;}
 .human header, .human .main{border-right:1px solid #eee;}
 .rps .choice li{display:inline-block;margin:0 5px;}
 .rps .choice li a{padding-top:120px;text-align:center;text-indent:-5000px;border:1px solid #fff;}
@@ -123,9 +125,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff670f', end
 .human .icon.rock{background-position:0 20px;}
 .human .icon.paper{background-position:0 -140px;}
 .human .icon.scissor{background-position:0 -265px;}
+.human .choice label{display: block;text-align: center;}
 .bot .icon.rock{background-position:-175px -140px;}
 .bot .icon.paper{background-position:-170px -280px;}
 .bot .icon.scissor{background-position:-170px 25px;}
+.bot .main{padding-top:80px!important;}
 
 .human .choice li a{border:1px solid #fff;border-radius:10px;}
 .human .choice li a:hover, .human .choice li a.active{border:1px dashed #00A0C6;}

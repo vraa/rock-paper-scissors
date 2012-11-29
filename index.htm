@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<meta charset="UTF-8">
 		<meta name="description" content="The Online Rock Paper Scissor Game" />
 		<meta name="keywords" content="rock, paper, scissor, game, online"/>
 		
@@ -33,7 +33,6 @@
 					<li><a href="javascript:void(0);" id="howto">How to play?</a></li>
 					<li><a href="javascript:void(0);" id="credits">Credits</a></li>
 				</ul>
-				<!-- Ads -->
 				<script type="text/javascript"><!--
 google_ad_client = "ca-pub-4601926589924919";
 /* rps */
@@ -45,7 +44,6 @@ google_ad_height = 90;
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
-			<!-- end of Ads -->
 			</header>
 			<section class="players clearfix">
 				<article class="player human">
@@ -59,10 +57,11 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 						</aside>
 					</header>
 					<section class="main">
+						<h4>Select a gesture by clicking on it</h4>
 						<ul class="choice">
-							<li><a id="rock" href="javascript:void(0);" class="rock icon">Rock</a></li>
-							<li><a id="paper" href="javascript:void(0);" class="paper icon">Paper</a></li>
-							<li><a id="scissor" href="javascript:void(0);" class="scissor icon">Scissor</a></li>
+							<li><label>&dArr; Rock &dArr;</label><a id="rock" href="javascript:void(0);" class="rock icon">Rock</a></li>
+							<li><label>&dArr; Paper &dArr;</label><a id="paper" href="javascript:void(0);" class="paper icon">Paper</a></li>
+							<li><label>&dArr; Scissor &dArr;</label><a id="scissor" href="javascript:void(0);" class="scissor icon">Scissor</a></li>
 						</ul>
 					</section>
 				</article>
@@ -141,7 +140,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 			</div>
 		</section>
 		
-		<script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>		
 		<script type="text/javascript" src="jquery.simplemodal.1.4.1.min.js"></script>
 		<script type="text/javascript" src="rps.js"></script>
 	</body>

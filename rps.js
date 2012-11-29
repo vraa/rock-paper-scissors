@@ -41,7 +41,7 @@ var rps= {
 			rps.humanChoice.addClass("chosen");
 			rps.humanChoice.find(".active").removeClass("active");
 			humanChosen.addClass("active");
-			
+			$('.human h4').html('...Bot thinking...').show('slow');
 			rps.botChoice.find("li").animate({
 				marginTop: '+=20'
 			}, 200, function(){
@@ -102,10 +102,15 @@ var rps= {
 			}
 		}
 		
+		var announcer = $('.human h4');
 		if(winner == "human"){
 			rps.humanScore += 1;
+			announcer.html('You win! <strong>' + human + '</strong> beats <strong>' + bot + '</strong> left and right!');
 		}else if(winner == "bot"){
 			rps.botScore += 1;
+			announcer.html('Bot win! <strong>' + human + '</strong> never messes with <strong>' + bot + '</strong>!');
+		}else{
+			announcer.html('No one wins. Go in peace or Try again!');
 		}
 		
 		$("." + winner).addClass("winner");
